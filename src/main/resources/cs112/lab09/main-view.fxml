@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
 
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="cs112.lab09.controllers.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+      fx:controller="cs112.lab09.controllers.MainController" stylesheets="@styles.css">
+    <Label text="Interactive Revisionist History Map" fx:id="appTitle" styleClass="main-view-title" />
+    <Label text="Red Summer Edition" fx:id="appSubtitle" styleClass="main-view-subtitle" />
+    <Label text="An exploration of key events from the Red Summer of 1919" fx:id="appDescription" wrapText="true"  styleClass="main-view-description" />
+    <ImageView fx:id="mainImageView" fitWidth="300" preserveRatio="true"/>
+    <Button text="Start" onAction="#onStartButtonClick" fx:id="startButton" styleClass="start-button"/>
+    <Button text="Quit" onAction="#onQuitButtonClick" fx:id="quitButton" styleClass="quit-button"/>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>

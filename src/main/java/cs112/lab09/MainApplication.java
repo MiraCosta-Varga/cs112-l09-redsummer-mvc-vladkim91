@@ -11,8 +11,11 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+
+        scene.getStylesheets().add(getClass().getResource("/cs112/lab09/styles.css").toExternalForm());
+
+        stage.setTitle("Interactive Revisionist History Map");
         stage.setScene(scene);
         stage.show();
     }
